@@ -5,14 +5,22 @@ import java.net.*;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-
+/**
+ * lee un url
+ */
 public class URLReader {
-
+	/**
+	 * Lee la url indicada
+	 * @param args argumentos
+	 */
     public static void main(String[] args) {
         readURL("http://localhost:36000/otroarchivoaqui.do?value=56");
 
     }
-
+    /**
+     * Lector de la url
+     * @param sitetoread sitio para leer
+     */
     public static void readURL(String sitetoread) {
         try {
             // Crea el objeto que representa una URL2

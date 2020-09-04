@@ -4,9 +4,15 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
+/**
+ * Escanea los direfentees protocoles de una url
+ *
+ */
 public class URLScanner {
-
+	/**
+	 * Se indican las url a escanear
+	 * @param args argumentos
+	 */
     public static void main(String[] args) {
 
         scanURL("https://ldbn.is.escuelaing.edu.co/AREP/Respuestas.txt");
@@ -15,7 +21,10 @@ public class URLScanner {
         scanURL("https://ldbn.is.escuelaing.edu.co/events/ArqIS2020/index.html#TemasC");
         scanURL("https://daniel@ldbn.is.escuelaing.edu.co/events/ArqIS2020/index.html#TemasC");
     }
-
+    /**
+     * Escanea los protocolos de las url
+     * @param siteurl url a escanear
+      */
     public static void scanURL(String siteurl) {
         try {
             URL site = new URL(siteurl);

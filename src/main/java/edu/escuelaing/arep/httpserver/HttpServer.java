@@ -1,5 +1,4 @@
 package edu.escuelaing.arep.httpserver;
-
 import org.apache.commons.io.FilenameUtils;
 
 import java.net.*;
@@ -8,7 +7,9 @@ import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.io.*;
-
+/**
+ * Servicio http
+ */
 public class HttpServer {
 
 	static Socket clientSocket = null;
@@ -19,7 +20,9 @@ public class HttpServer {
 	public HttpServer() {
 		running = false;
 	}
-
+	/**
+	 * Ejecuta el servicio
+	 */
 	public void start() {
 		try {
 			ServerSocket serverSocket = null;
@@ -51,7 +54,11 @@ public class HttpServer {
             Logger.getLogger(HttpServer.class.getName()).log(Level.SEVERE, null, ex);
         }
 	}
-
+	/**
+	 * Hace el proceso de respuesta de las diferentes peticiones
+	 * @param clientSocket2 socket cliente de la peticion
+	 * @throws IOException si hay error en la entrada o salida
+	 */
 	private void processRequest(Socket clientSocket2) throws IOException {
 		
 		printwriter = new PrintWriter(clientSocket2.getOutputStream(), true);
@@ -82,7 +89,11 @@ public class HttpServer {
 		in.close();
 		
 	}
-
+	/**
+	 * Responde a las peticiones propuestas
+	 * @param req solicitud
+	 * @throws IOException si hay error en la entrada o salida
+	 */
 	public static void returnRequest(String req) throws IOException {
 
 		String path = "src/main/resources/";
@@ -132,7 +143,10 @@ public class HttpServer {
 		}
 
 	}
-
+	/**
+	 * Retorna el puerto por el que corre el servicio
+	 * @return port (4567)
+	 */
 	static int getPort() {
 		if (System.getenv("PORT") != null) {
 			return Integer.parseInt(System.getenv("PORT"));
