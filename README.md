@@ -32,7 +32,7 @@ mvn exec:java -Dexec.mainClass="edu.escuelaing.arep.spark.Spark
 
 ![compilar](imagenes/compilar.png)
 
-una vez el servicio este corriendo podras abrir la pagina desde el browser con la siguiente dirección http://localhost:4567/index.html
+Con este comando empezara a correr el servicio Http, y podras abrir la pagina desde el browser con la siguiente dirección http://localhost:4567/index.html
 
 ## Pruebas  [![CircleCI](https://circleci.com/gh/Edyesid/AREP-taller-clientes-servicios.svg?style=svg)](https://circleci.com/gh/Edyesid/AREP-taller-clientes-servicios)
 
