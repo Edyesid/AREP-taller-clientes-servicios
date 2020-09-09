@@ -38,7 +38,7 @@ public class HttpServer {
 			while (running) {
 
 				try {
-					System.out.println("Listo para recibir en el puerto" + getPort() + ".....");
+					System.out.println("Listo para recibir en el puerto " + getPort() + ".....");
 					clientSocket = serverSocket.accept();
 				} catch (IOException e) {
 					System.err.println("Accept failed.");
@@ -71,7 +71,7 @@ public class HttpServer {
 		Matcher matcher = null;
 
 		while ((inputLine = in.readLine()) != null) {
-			System.out.println("Recibí: " + inputLine);
+			System.out.println("Recibï¿½: " + inputLine);
 			stringBuilder.append(inputLine);
 			if (!in.ready()) {
 				matcher = pattern.matcher(stringBuilder.toString());
@@ -145,14 +145,14 @@ public class HttpServer {
 	}
 	/**
 	 * Retorna el puerto por el que corre el servicio
-	 * @return port (4567)
+	 * @return port (36000)
 	 */
 	static int getPort() {
 		if (System.getenv("PORT") != null) {
 			return Integer.parseInt(System.getenv("PORT"));
 		}
 
-		return 4567;
+		return 36000;
 	}
 
 }
